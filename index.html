@@ -8,48 +8,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        .title {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px 18px #888888;
+        }
+        .list{
+            list-style-type: square;
+        }
+        a{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <form id="chat">
-        <input type="text" name="username" placeholder="Digite seu usuario">
-        <div class="messages"></div>
-        <input type="text" name="message" placeholder="Digite sua mensagem">
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script type="text/javascript">
-        var socket = io('http://localhost:3000');
-
-        function renderMessages(message) {
-            $('.messages').append('<div class="message"><strong>'+message.author+': </strong>'+message.message+'</div>')
-        }
-        
-        socket.on('previousMessage' , function (messages) {
-            for (message of messages)  {      
-                renderMessages(message);
-            }
-        });
-
-        socket.on('receivedMessage', function(message) {
-            renderMessages(message);
-        });
-
-        $('#chat').submit(function(event){
-            event.preventDefault();
-
-            var author = $('input[name=username]').val();
-            var message = $('input[name=message]').val();
-
-            if(author.length && message.length){
-                var messageObject = {
-                    author: author,
-                    message: message,
-                };
-                renderMessages(messageObject);
-               socket.emit('sendMessage', messageObject);
-            }
-        });
-    </script>
+    <h1 class="title">
+        Todas as coisas toscas do Jeff :)
+    </h1>
+    <ul class="list">
+        <li> <a  href="chatFromNote/index.html">chatFromNode</a> </li>
+        <li><a href="geradorDeCarteirinha/index.html">geradorDeCarteirinha</a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </body>
 </html>
