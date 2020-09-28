@@ -1,3 +1,9 @@
+var form = document.getElementById('formulario');
+var campo = document.getElementById('campo');
+console.log(form);
+
+
+
 
 var data = new Date();
 var dia     = data.getDate();           
