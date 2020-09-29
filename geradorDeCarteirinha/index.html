@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+
     <title>Document</title>
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="row justify-content-center">
         <div class="col-3 ">
-            <form id="formulario" action="">
+            <form id="formulario" method="GET">
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
@@ -40,12 +45,69 @@
                     <label for="photo">Foto:</label>
                     <input type="file" accept="image/*" class="form-control" id="matricula">
                 </div>
-    
-                <button type="submit" class="btn btn-primary">Submit</button>    
+                <input id="enviar" type="submit" value="Enviar">
             </form>
+        </div>
+        <div  class="col-3">
+            <div class="card">
+                <div class="cardName">
+
+                </div>
+                <div class="cardBirthday">
+                    
+                </div>
+                <div class="cardRegistry">
+                    
+                </div>
+                <div class="cardCpf">
+                    
+                </div>
+                <div class="cardRg">
+                    
+                </div>
+                <div class="cardInstituition">
+                    
+                </div>
+                <div class="cardDataExpedicao">
+                    
+                </div>
+ 
+            </div>
         </div>
     </div>
     
-    
+    <style>
+        .card{
+            margin-top: 30px;
+            border: solid;
+            height: 306px;
+            width:  486px;
+        }
+    </style>
 </body>
+<script>
+ function mostrarValor() {
+     dataExpedição = 
+    name            =  document.getElementById("name").value;
+    birthday        =  document.getElementById("birthday").value;
+    cpf             =  document.getElementById("cpf").value;
+    rg              =  document.getElementById("rg").value;
+    instituition    =  document.getElementById("instituition").value;
+    registry        =  document.getElementById("registry").value;
+    console.log(name,birthday,cpf,rg,instituition,registry);
+    $('.cardName').append('<strong>Nome: </strong>'+name+'');
+    $('.cardBirthday').append('<strong>Data de Nascimento: </strong>'+birthday+'');
+    $('.cardRegistry').append('<strong>Matricula: </strong>'+registry+'');
+    $('.cardCpf').append('<strong>CPF: </strong>'+cpf+'');
+    $('.cardRg').append('<strong>RG: </strong>'+rg+'');
+    $('.cardInstituition').append('<strong>Data de Nascimento: </strong>'+instituition+'');
+    $('.cardDataExpedicao').append('<strong>Data de Nascimento: </strong>'++'');
+    
+}
+
+document.getElementById("enviar").onclick = function(e) {
+    mostrarValor();
+    e.preventDefault();
+}
+</script>
 </html>
