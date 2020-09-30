@@ -9,7 +9,7 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous">
     </script>
-
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,11 +27,11 @@
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF:</label>
-                    <input type="text" class="form-control" id="cpf">
+                    <input type="number" class="form-control" id="cpf" minlength="11" maxlength="11">
                 </div>
                 <div class="form-group">
                     <label for="rg">RG:</label>
-                    <input type="text" class="form-control" id="rg">
+                    <input type="number" class="form-control" id="rg" minlength="7" maxlength="10">
                 </div>
                 <div class="form-group">
                     <label for="instituition">Instituição:</label>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     <label for="photo">Foto:</label>
-                    <input type="file" accept="image/*" class="form-control" id="matricula">
+                    <input type="file" accept="image/*" class="form-control" id="photo">
                 </div>
                 <input id="enviar" type="submit" value="Enviar">
             </form>
@@ -53,7 +53,13 @@
                 <div class="cardName">
 
                 </div>
+                <div class="cardInstituition">
+                    
+                </div>
                 <div class="cardBirthday">
+                    
+                </div>
+                <div class="cardDataExpedicao">
                     
                 </div>
                 <div class="cardRegistry">
@@ -65,49 +71,13 @@
                 <div class="cardRg">
                     
                 </div>
-                <div class="cardInstituition">
-                    
+                <div id="img">
+
                 </div>
-                <div class="cardDataExpedicao">
-                    
-                </div>
- 
             </div>
         </div>
     </div>
-    
-    <style>
-        .card{
-            margin-top: 30px;
-            border: solid;
-            height: 306px;
-            width:  486px;
-        }
-    </style>
 </body>
-<script>
- function mostrarValor() {
-     dataExpedição = 
-    name            =  document.getElementById("name").value;
-    birthday        =  document.getElementById("birthday").value;
-    cpf             =  document.getElementById("cpf").value;
-    rg              =  document.getElementById("rg").value;
-    instituition    =  document.getElementById("instituition").value;
-    registry        =  document.getElementById("registry").value;
-    console.log(name,birthday,cpf,rg,instituition,registry);
-    $('.cardName').append('<strong>Nome: </strong>'+name+'');
-    $('.cardBirthday').append('<strong>Data de Nascimento: </strong>'+birthday+'');
-    $('.cardRegistry').append('<strong>Matricula: </strong>'+registry+'');
-    $('.cardCpf').append('<strong>CPF: </strong>'+cpf+'');
-    $('.cardRg').append('<strong>RG: </strong>'+rg+'');
-    $('.cardInstituition').append('<strong>Data de Nascimento: </strong>'+instituition+'');
-    $('.cardDataExpedicao').append('<strong>Data de Nascimento: </strong>'++'');
-    
-}
+<script src="script.js"></script>
 
-document.getElementById("enviar").onclick = function(e) {
-    mostrarValor();
-    e.preventDefault();
-}
-</script>
 </html>
