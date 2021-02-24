@@ -1,4 +1,6 @@
 function start() {
+    var x = document.getElementById("BombHasBeenPlanted"); 
+    x.play();
     const startMinutes = 30;
     let time = startMinutes * 60;
     const countdown = document.getElementById('time');
@@ -9,8 +11,12 @@ function start() {
         countdown.innerHTML = `${minutes}:${seconds}`;
         time--;
         if( minutes === 0 && seconds === '00'){
-        notifyMe()
-        clearInterval(interval);
+            notifyMe()
+            clearInterval(interval);
+        }
+        if( minutes === 0 && seconds === 45){
+            var a = document.getElementById("40seconds"); 
+            a.play();
         }
     }, 1000);
 }
