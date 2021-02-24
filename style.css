@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body{
+    background-color:rgb(248, 240, 227);
+}
+.container{
+    margin-top: 14%;
+}
+.btn{
+    /* border: solid; */
+    padding: 30px;
+    text-align: center;
+}
+.btn-btn{
+    /* border: solid; */
+    padding: 20px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition:  2s;
+}
+.btn-btn.start{
+    background-color: greenyellow;
+    /* box-shadow: 5px; */
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+}
+
+.btn-btn.reset{
+    background-color: rgb(255, 106, 106);
+    background-color: rgb(236, 57, 57);
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+
+}
+.btn-btn.break{
+    background-color: turquoise;
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+
+}
+.btn-btn.start:hover{
+    background-color: rgb(129, 177, 56);
+    border-radius: 100px;
+
+}
+.btn-btn.start:hover{
+    background-color: rgb(129, 177, 56);
+    border-radius: 100px;
+
+}
+.btn-btn.reset:hover{
+    background-color: rgb(236, 57, 57);
+    border-radius: 100px;
+
+}
+.btn-btn.break:hover{
+    background-color:  rgb(38, 155, 143);
+    border-radius: 100px;
+}
+.btn-btn.pause:hover{
+    background-color:grey;
+    border-radius: 100px;
+
+}
+.btn-btn.pause{
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+}
+h1{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
